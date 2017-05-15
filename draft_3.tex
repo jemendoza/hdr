@@ -1,0 +1,97 @@
+\documentclass[10pt,a4paper]{book}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%Import the natbib package and sets a bibliography  and citation styles
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+
+% ****** Margings ******
+\textwidth = 6.5 in
+\textheight = 9 in
+\topmargin = -0.5 in
+\evensidemargin = 0 in
+\oddsidemargin = 0 in
+\parskip = 0.1 in
+\parindent = 0 in
+\tabcolsep = 5 pt
+
+% ******* HEADERS ******
+\author{Jorge E. Mendoza}
+\title{HDR}
+
+\begin{document}
+
+% *********** TITTLE ***************
+\maketitle
+
+% *********** CONTENTS ***************
+\tableofcontents
+
+
+% *********** INTRODUCTION ***************
+\chapter{Introduction}
+
+% *********** TECHNICAL ***************
+\input{./tex/technical_background.tex}
+
+
+% *********** STOCHASTIC ***************
+\input{./tex/stochastic.tex}
+
+% *********** BIBLIOGRAPHY ***************
+\bibliography{mybib}
+
+% *********** END ***************
+%\end{document}
+
+
+% *********** ELECTRIC ***************
+\chapter{Electric vehicle routing}
+  \section{Battery charging policies and charging function approximations}  
+  	\subsection{Full charging with constant charging times}
+  	Paper: Montoya et al.(2016a)
+  	\subsection{Partial charging with non-linear charging times}
+  	Paper: Montoya et al. (2016b)
+  \section{Charging station capacity}
+    Working paper: Froger et al. (2017)
+  \section{Uncertain charging station availability}
+  	Working paper: Kullman, Goodson, and Mendoza (2017)
+  \section{Shared charging infrastructure}
+  	Working paper: Kok et al. (2017)
+  \section{Perspectives}
+  \subsection{Considering battery degradation costs}
+  	On going Ph.D. Thesis: Laura Echeverri
+  \subsection{Multigraph formulations: trading off energy consumption and travel time}
+  	Future Post-doctoral project: Cagri Kok
+  \subsection{Uncertain energy consumption}
+  	Future Ph.D. internship: Samuel Pelletier
+
+% *********** APPLICATIONS ***************
+\chapter{Industrial applications}
+  \section{Vehicle routing in a public utility}
+  Paper: Mendoza, Medaglia, and Velasco (2009)
+  \section{Technician routing with electric and conventional vehicles}
+  Working paper: Montoya et al. (2017)
+  \section{Maintenance scheduling in the wind industry}
+  Paper: Froger et al. (2016a)\\
+  Working papers: Froger et al. (2016b, 2016c)
+
+% *********** VRP-REP ***************
+\chapter{VRP-REP: the vehicle routing problem repository}
+Working paper: Mendoza et al. (2017)
+
+% *********** CONCLUSIONS ***************
+\chapter{Conclusions and perspectives}
+
+\begin{appendix}
+\chapter{Curriculum Vitae}
+\chapter{Selected journal articles}
+\chapter{Tutorial: writing data files using the VRP-REP instance specification}
+\end{appendix}
+\end{document}
